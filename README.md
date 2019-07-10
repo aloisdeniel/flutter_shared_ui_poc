@@ -16,20 +16,24 @@ The project contains two different parts.
 
 A plain dart package that abstracts every common flutter APIs (and depends neither on `dart:io` and `dart:html`). I just added the widgets used for the POC, but a generator could be implemented to analyse common APIs and generate stubs for all types and methods.
 
+### [flutter_cross](flutter_cross)
+
+This package exposes the right API regarding the current target : `flutter_web` if `dart:html` is available, `flutter` if `dart:io` is available, else `flutter_stub`.
+
 ### [example](example)
 
 The example project that shows a [mobile](example/mobile) and a [web app](example/webapp) that uses a Widget that is declared in a third [shared_ui project](example/shared_ui).
 
 ## The trick
 
-The interresting part is in the [home_page.dart](example/shared_ui/lib/home_page.dart) file.
+The interresting part is in the [flutter_cross/material.dart](flutter_cross/lib/material.dart) file.
 
 ```dart
-import 'package:flutter_stub/material.dart'
+export 'package:flutter_stub/material.dart'
   // ignore: uri_does_not_exist
   if (dart.library.html) 'package:flutter_web/material.dart'
   // ignore: uri_does_not_exist
   if (dart.library.io) 'package:flutter/material.dart';
 ```
 
-This conditional imports tell the compiler that it should override the default stubs for the dedicated platform dependencies.
+This conditional exports tell the compiler that it should override the default stubs for the dedicated platform dependencies.
