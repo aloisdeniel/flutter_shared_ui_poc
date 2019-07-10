@@ -12,13 +12,13 @@ The project contains two different parts.
 
 [Directory](flutter_stub)
 
-a plain dart package that abstracts every common flutter APIs. I just added the widgets used for the POC, but a generator could be implemented to analyse common APIs and generate stubs.
+A plain dart package that abstracts every common flutter APIs (and depends neither on `dart:io` and `dart:html`). I just added the widgets used for the POC, but a generator could be implemented to analyse common APIs and generate stubs for all types and methods.
 
 ### example
 
 [Directory](flutter_stub)
 
-The example project that shows a mobile and a web app that uses a Widget that is declared in a third [shared_ui project](example/shared_ui).
+The example project that shows a [mobile](example/mobile) and a [web app](example/webapp) that uses a Widget that is declared in a third [shared_ui project](example/shared_ui).
 
 ## The trick
 
