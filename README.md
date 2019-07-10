@@ -1,8 +1,8 @@
 # flutter_shared_ui_poc
 
-As of today, flutter and flutter_web are two distinct framework, so user intefaces can't be shared between a mobile and a web app.
+As of today, flutter and flutter_web are two distinct frameworks, so user intefaces can't be shared between a mobile and a web app.
 
-This project demonstrate a principle for sharing UI code between flutter and flutter_web base on conditional imports.
+This project demonstrates a principle for sharing UI code between flutter and flutter_web based on conditional imports.
 
 ## Architecture
 
