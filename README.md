@@ -1,6 +1,10 @@
 # flutter_shared_ui_poc
 
-Today (more info [here](https://github.com/flutter/flutter/wiki/Building-a-web-application-with-Flutter) and [here](https://github.com/flutter/flutter/issues/34082)), flutter and flutter_web are two distinct frameworks, so user intefaces can't be shared between a mobile and a web app.
+> **DISCLAIMER:**
+>
+> This project is just a temporary workaround for sharing more code between platforms. At one point, Flutter Web will be merged into the main repository and you will be able to generate a web app from an existing mobile app (more info [here](https://github.com/flutter/flutter/wiki/Building-a-web-application-with-Flutter) and [here](https://github.com/flutter/flutter/issues/34082)). It is recommended to wait for the merge.
+
+Today, flutter and flutter_web are two distinct frameworks, so user intefaces can't be shared between a mobile and a web app.
 
 This project demonstrates a principle for sharing UI code between flutter and flutter_web based on conditional imports.
 
