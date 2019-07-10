@@ -1,8 +1,4 @@
-import 'package:flutter_stub/material.dart'
-  // ignore: uri_does_not_exist
-  if (dart.library.html) 'package:flutter_web/material.dart'
-  // ignore: uri_does_not_exist
-  if (dart.library.io) 'package:flutter/material.dart';
+import 'package:flutter_cross/material.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
