@@ -1,24 +1,24 @@
 # flutter_shared_ui_poc
 
-As of today, flutter and flutter_web are two distinct framework, so user intefaces can't be shared between a mobile and a web app.
+> **DISCLAIMER:**
+>
+> This project is just a temporary workaround for sharing more code between platforms. At one point, Flutter Web will be merged into the main repository and you will be able to generate a web app from an existing mobile app (more info [here](https://github.com/flutter/flutter/wiki/Building-a-web-application-with-Flutter) and [here](https://github.com/flutter/flutter/issues/34082)). Obviously, it is recommended to wait for the merge.
 
-This project demonstrate a principle for sharing UI code between flutter and flutter_web base on conditional imports.
+Today, flutter and flutter_web are two distinct frameworks, so user intefaces can't be shared between a mobile and a web app.
+
+This project demonstrates a principle for sharing UI code between flutter and flutter_web based on conditional imports.
 
 ## Architecture
 
 The project contains two different parts.
 
-### flutter_stub
+### [flutter_stub](flutter_stub)
 
-[Directory](flutter_stub)
+A plain dart package that abstracts every common flutter APIs (and depends neither on `dart:io` and `dart:html`). I just added the widgets used for the POC, but a generator could be implemented to analyse common APIs and generate stubs for all types and methods.
 
-a plain dart package that abstracts every common flutter APIs. I just added the widgets used for the POC, but a generator could be implemented to analyse common APIs and generate stubs.
+### [example](example)
 
-### example
-
-[Directory](flutter_stub)
-
-The example project that shows a mobile and a web app that uses a Widget that is declared in a third [shared_ui project](example/shared_ui).
+The example project that shows a [mobile](example/mobile) and a [web app](example/webapp) that uses a Widget that is declared in a third [shared_ui project](example/shared_ui).
 
 ## The trick
 
