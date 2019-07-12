@@ -1,0 +1,16 @@
+name: provider_cross
+description: A mixture between dependency injection and state management, built with widgets for widgets.
+version: 3.1.0
+homepage: https://github.com/rrousselGit/provider
+authors:
+  - Remi Rousselet <darky12s@gmail.com>
+  - Flutter Team <flutter-dev@googlegroups.com>
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
+
+dependencies:
+  flutter_cross:
+    git:
+      url: https://github.com/aloisdeniel/flutter_shared_ui_poc
+      path: packages/flutter_cross
