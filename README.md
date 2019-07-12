@@ -49,7 +49,7 @@ If you share Widgets and use them in your platform code, you IDE will break beca
 
 ## The trick
 
-The interresting parts are in the [flutter_cross](flutter_cross/lib/material.dart) export files.
+The interresting parts are in the [flutter_cross](packages/flutter_cross/lib/material.dart) export files.
 
 ```dart
 export 'package:flutter_stub/material.dart'
@@ -65,7 +65,7 @@ This conditional exports tell the compiler that it should override the default s
 
 The project contains three different parts.
 
-#### [flutter_stub](flutter_stub) & [flutter_stub_ui](flutter_stub_ui)
+#### [flutter_stub](packages/flutter_stub) & [flutter_stub_ui](packages/flutter_stub_ui)
 
 A plain dart package that abstracts every common Flutter APIs (and depends neither on `dart:io` and `dart:html`). 
 
@@ -76,7 +76,7 @@ To create those packages, I forked `flutter/flutter_web` repository and :
 
 A generator could be implemented to automate this process.
 
-#### [flutter_cross](flutter_cross)
+#### [flutter_cross](packages/flutter_cross)
 
 This package exposes the right API regarding the current target : `flutter_web` if `dart:html` is available, `flutter` if `dart:io` is available, else `flutter_stub`.
 
