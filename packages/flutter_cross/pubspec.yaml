@@ -9,7 +9,9 @@ environment:
 
 dependencies:
   flutter_stub:
-    path: ../flutter_stub
+    git:
+      url: https://github.com/aloisdeniel/flutter_shared_ui_poc
+      path: packages/flutter_stub
 
 dev_dependencies:
   pedantic: ^1.0.0
