@@ -1,0 +1,16 @@
+name: flutter_stub
+description: A starting point for Dart libraries or applications.
+# version: 1.0.0
+# homepage: https://www.example.com
+# author: aloisdeniel <alois.deniel@outlook.com>
+
+environment:
+  sdk: '>=2.2.0 <3.0.0'
+
+dependencies:
+  flutter_stub_ui: 
+    path: ../flutter_stub_ui
+  collection: ^1.0.0
+  meta: ^1.1.5
+  vector_math: ^2.0.7
+  typed_data: ^1.1.6

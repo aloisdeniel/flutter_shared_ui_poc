@@ -1,4 +1,5 @@
 import 'package:flutter_cross/material.dart';
+import 'package:flutter_cross/ui.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      backgroundColor: Color(0xFFEEEEEE),
       body: Center(
         child: Text(
           'You have pushed the button this many times: $_counter',
